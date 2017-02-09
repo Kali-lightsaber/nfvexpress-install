@@ -148,4 +148,6 @@ Full installation guide for FreeBSD® is available on our [website](http://docs.
 - Elastic Map Reduce (Sahara)
 - OpenStack Orchestration (Heat)
 
+For more information regarding NFV Express project status read [here](https://github.com/nfvexpress/nfvexpress/blob/master/README.md).
+
 
