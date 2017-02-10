@@ -107,7 +107,7 @@ We provide a pre-built FreeBSD 11.0 image that works with NFV Express.
 - https://s3.amazonaws.com/nfvexpress/images/freebsd-11-xen-xn0.qcow2.tar.bz2
 
 # Other tested images
-It's possible to boot popular Linux-based cloud images.
+It's possible to boot popular Linux-based cloud images as well as *BSD
 
 - [CentOS 7.1](http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1503.qcow2)
 - [Ubuntu 14.04 LTS](https://cloud-images.ubuntu.com/trusty/current/)
