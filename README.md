@@ -10,9 +10,9 @@ This bundle of scripts deploys a single-node OpenStack on FreeBSD 11 from NFV Ex
 - Horizon (OpenStack Dashboard)
 
 # Requirements
-- Fresh installed FreeBSD 11 server on x86-64 hardware with 8GB RAM
+- Fresh installed FreeBSD 11 server on x86-64 hardware with at least 8GB RAM
 - EPT and IOMMU processor features to use Xen hypervisor
-- Non-UEFI system for Xen
+- Configured Xen Dom0 with 6GB RAM
 - At least 1 NIC with Static IP
 
 # Networking
@@ -63,7 +63,7 @@ Where
   dom0_mem       - Memory allocated for Dom0
   dom0_max_vcpus - Virtual CPUs allocated for Dom0
 Example:
-  xen-install.sh 2048M 4
+  xen-install.sh 6144M 4
 ```
 
 Launch installation script
