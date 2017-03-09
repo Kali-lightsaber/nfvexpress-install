@@ -9,6 +9,10 @@ This bundle of scripts deploys a single-node OpenStack on FreeBSD 11 from NFV Ex
 - Cinder (block storage service, available only on Xen installations)
 - Horizon (OpenStack Dashboard)
 
+# Notice
+
+**Starting 9 of March 2017, new deployments from binary repository are not encouraged.**
+
 # Requirements
 - Fresh installed FreeBSD 11 server on x86-64 hardware with at least 8GB RAM
 - EPT and IOMMU processor features to use Xen hypervisor
