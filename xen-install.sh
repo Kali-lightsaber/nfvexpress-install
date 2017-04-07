@@ -25,6 +25,10 @@ echo "$XEN_CMDLINE"
 echo ">> Installing Xen package"
 pkg install -y xen
 
+echo ">> Enabling Xen services"
+sysrc xendriverdomain_enable="YES"
+sysrc xencommons_enable="YES"
+
 echo ">> Setting $SYSCTL_CONF variables"
 sed -i '' '/vm\.max_wired/d' $SYSCTL_CONF
 echo "vm.max_wired=-1" >> $SYSCTL_CONF
