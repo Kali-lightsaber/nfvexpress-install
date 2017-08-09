@@ -13,7 +13,7 @@ pkg update
 
 echo ">> Installing packages"
 pkg install -r 11amd64-head-xen -y py27-pymysql py27-python-memcached py27-crudini py27-python-openstackclient
-pkg install -r 11amd64-head-xen -y sudo qemu-utils
+pkg install -r 11amd64-head-xen -y ca_root_nss sudo qemu-utils
 
 echo ">> Configuring NTP Daemon using default ntp.conf"
 sysrc ntpd_enable="YES"
