@@ -5,7 +5,7 @@
 . ./include/functions.sh
 
 echo ">> Installing glance"
-pkg install -y py27-glance
+pkg install -r 11amd64-head-xen -y py27-glance
 
 echo ">> Creating glance database" 
 ensure_db glance $GLANCE_DBUSER $GLANCE_DBPASS

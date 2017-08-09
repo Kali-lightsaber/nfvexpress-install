@@ -7,7 +7,7 @@ for i in $(echo mysql-server memcached rabbitmq apache24 glance nova cinder); do
     done
 done
 
-for i in $(echo xen qemu); do
+for i in $(echo xen); do
     if virsh -c $i:///system list > /dev/null; then
         for j in $(virsh -c $i:///system list --all | grep instance | awk '{print $2}'); do
             virsh -c $i:///system destroy $j

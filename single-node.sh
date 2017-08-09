@@ -9,7 +9,7 @@ if [ "$#" -ne 5 ]; then
     echo "  $0 hypervisor hostname address pub_iface flat_iface"
     echo ""
     echo "Where"
-    echo "  hypervisor - xen or qemu"
+    echo "  hypervisor - xen"
     echo "  hostname   - hostname to use for controller (`hostname -f`)"
     echo "  address    - IP address of controller"
     echo "  pub_iface  - public interface (for example em0)"
@@ -17,7 +17,6 @@ if [ "$#" -ne 5 ]; then
     echo ""
     echo "Example:"
     echo "  $0 xen  controller 192.168.1.20 em0 tap0"
-    echo "  $0 qemu controller 192.168.1.20 em0 tap0"
     exit 1
 fi
 
@@ -41,12 +40,9 @@ case $VIRT_TYPE in
             echo "Xen hypervisor is active"
         else
             echo "Error: Xen is not installed."
-            echo "Use xen-install.sh to install Xen hypervisor or run $0 with qemu hypervisor."
+            echo "Use xen-install.sh to install Xen hypervisor."
             exit 2
         fi
-        ;;
-    qemu)
-        echo "QEMU hypervisor will be used"
         ;;
     *)
         echo "Error: Unknown hypervisor $VIRT_TYPE"
@@ -89,11 +85,9 @@ fi
 . ./keystone.sh
 . ./glance.sh
 
-if [ $VIRT_TYPE == "xen" ]; then
-    . ./cinder-share.sh
-    . ./cinder.sh
-    . ./cinder-volume.sh
-fi
+. ./cinder-share.sh
+. ./cinder.sh
+. ./cinder-volume.sh
 
 . ./nova.sh
 . ./nova-compute.sh

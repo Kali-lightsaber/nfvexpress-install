@@ -5,10 +5,10 @@
 . ./include/functions.sh
 
 echo ">> Installing nova"
-pkg install -r 11amd64-head-xen py27-nova
+pkg install -r 11amd64-head-xen -y py27-nova
 
 echo ">> Installing libvirt"
-pkg install -r 11amd64-head-xen libvirt
+pkg install -r 11amd64-head-xen -y libvirt
 
 echo ">> Configuring nova.conf"
 crudini --set $NOVA_CONF vnc enabled True

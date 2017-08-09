@@ -5,7 +5,7 @@
 . ./include/functions.sh
 
 echo ">> Installing keystone"
-pkg install -y py27-keystone
+pkg install -r 11amd64-head-xen -y py27-keystone
 
 echo ">> Creating keystone database"
 ensure_db keystone $KEYSTONE_DBUSER $KEYSTONE_DBPASS

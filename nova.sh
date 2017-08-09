@@ -14,7 +14,7 @@ fi
 
 mkdir -p $NOVNC_PATH
 
-fetch "http://github.com/kanaka/noVNC/tarball/master" -o /tmp/novnc.tar.gz
+fetch "https://github.com/novnc/noVNC/archive/v0.6.2.tar.gz" -o /tmp/novnc.tar.gz
 tar xvf /tmp/novnc.tar.gz --strip 1 -C $NOVNC_PATH
 
 echo ">> Creating keystone database"
